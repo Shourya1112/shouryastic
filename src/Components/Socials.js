@@ -1,10 +1,8 @@
 import React from 'react';
 import githubBlack from "../Assets/Images/github-d.png";
 import linkedinBlack from "../Assets/Images/linkedin-d.png";
-import emailBlack from "../Assets/Images/email-d.png";
 import githubWhite from "../Assets/Images/gihub-w.svg";
 import linkedinWhite from "../Assets/Images/linkedin-w.png";
-import emailWhite from "../Assets/Images/email-w.png"
 import "../styles/socials.css";
 
 const Socials = (props) => {
