@@ -1,44 +1,54 @@
-import React, { useState } from 'react'
-import lamp from "../Assets/Images/lamp.png";
+import React, { useState , useEffect } from 'react'
+import lampOff from "../Assets/Images/lamp-off.png";
 import lampOn from "../Assets/Images/lamp-on.png";
+import backdropWhite from "../Assets/Images/white-contour-c990a61f.svg";
+import Info from './Info';
+import Window from './Window';
 import "../styles/Home.css"
 
 const Home = () => {
-    const [ darkMode , setDarkmode ] = useState(true);
+    const [ darkMode , setDarkmode ] = useState(() => {
+    const storedDarkMode = localStorage.getItem('darkMode');
+        return storedDarkMode ? JSON.parse(storedDarkMode) : true;
+    });
+
+    // Update localStorage whenever darkMode changes
+    useEffect(() => {
+        localStorage.setItem('darkMode', JSON.stringify(darkMode));
+    }, [darkMode]);  
+
+    const [ activeTab, setActiveTab ] = useState(1);
+    console.log(activeTab)
+
+
 
     const handleDarkMode = () => {
         setDarkmode(prev => !prev)
     }
 
   return (
-    <div className={ darkMode? "home" : "home-light"}>
+    <div className={ darkMode? "home dark" : "home"}>
+    <img src={darkMode? "" : backdropWhite} alt='img' className={darkMode? "backdrop" : "backdrop light"}/>
         <img
-            src={ darkMode? lamp : lampOn }
+            src={ darkMode? lampOff : lampOn }
             alt='lamp icon'
             className='lamp-icon'
             onClick={handleDarkMode}
         />
         <div className='left'>
-            <div className='info'>
-            <h3 className='hi'>Hi,<span className={ darkMode? "me" : "me-light"}>I Am</span></h3>
-            <h1 className='name'>Shourya<br/>Mishra</h1>
-                <h2 className='kaam'>Full Stack Dev..</h2>
-                <ul className='nav'>
-                    <li className='nav-items'><span>Work</span></li>
-                    <li className='nav-items'><span>Skills</span></li>
-                    <li className='nav-items'><span>Projects</span></li>
-                    <li className='nav-items'><span>Know Me</span></li>
-                </ul>
-                <h2 className='int'>
-                if ( Recruiter === Interested ) {"{"} <br/> <button className='hire-btn'>Contact Me</button> <br/> {"}"} <br/> else {"{"} <br/> <button className='resume-btn'>Resume</button> <br/> {"}"};
-                </h2>
-            </div>
+            <Info 
+                darkMode={darkMode}
+                setActiveTab={setActiveTab}
+            />
         </div>
         <div className='disp'>
-
+            <Window 
+                darkMode={darkMode} 
+                activeTab={activeTab}
+            />
         </div>
     </div>
   )
 }
 
-export default Home
+export default Home;

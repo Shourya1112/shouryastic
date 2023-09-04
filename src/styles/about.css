@@ -1,0 +1,65 @@
+.about {
+    padding-inline: 100px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    gap: 40px;
+}
+
+.card {
+    width: 80%;
+    height: fit-content;
+    padding: 20px;
+    border-radius: 30px;
+    background-color: #070707;
+    border: 2px #101010 solid;
+}
+
+.light {
+    background-color: #eeeeee;
+    box-shadow: #101010 10px;
+    border: 2px #dddddd solid;
+    -webkit-box-shadow: 0px 0px 20px 0px rgba(133, 133, 133, 0.8);
+    -moz-box-shadow: 0px 0px 20px 0px rgba(133, 133, 133, 0.8);
+    box-shadow: 0px 0px 20px 0px rgba(133, 133, 133, 0.8);
+}
+
+.tag2 {
+    font-size: 30px;
+    color: var(--color2);
+    margin: 0;
+
+}
+
+.passage {
+    font-size: 22px;
+    font-weight: 400;
+    padding-left: 10px;
+    margin: 5px;
+}
+
+.ans {
+    font-size: 30px;
+    font-weight: 500;
+    align-self: center;
+    margin: 5px;
+    padding-left: 30px;
+}
+
+.profile {
+    font-size: 25px;
+    font-weight: 400;
+}
+
+.period {
+    font-size: 20px;
+    font-weight: 400;
+    color: #aaaaaa
+}
+
+
+

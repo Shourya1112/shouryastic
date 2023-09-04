@@ -1,0 +1,33 @@
+.socials {
+    /* width: 20px; */
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 30px;
+    margin-top: 15px;
+    padding-inline: 15px;
+    cursor: pointer;
+}
+
+.links {
+    width: fit-content;
+    height: fit-content;
+    border-radius: 50%;
+}
+
+.social-icons {
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+}
+
+.social-icons:hover {
+    transform: scale(1.15);
+    transition: 150ms ease;
+}
+
+.social-icons:active {
+    transform: scale(1.05);
+    transition: 150ms ease;
+}

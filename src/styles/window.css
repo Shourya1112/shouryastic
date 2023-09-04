@@ -1,0 +1,23 @@
+.window {
+    height: 100%;
+    width: 100%;
+    overflow-y: scroll;
+}
+
+/* Hide the scrollbar in webkit-based browsers */
+.window::-webkit-scrollbar {
+    width: 0;
+    /* You can also use 'height: 0;' for horizontal scrollbar */
+    background: transparent;
+    /* Optional: Set the background to match your component */
+}
+
+.divider-light {
+    display: none;
+}
+
+@media (max-width: 900) {
+    .window {
+        overflow-y: unset;
+    }
+}

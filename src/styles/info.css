@@ -1,0 +1,153 @@
+.info {
+    margin-right: 150px;
+    margin-left: 50px;
+    width: fit-content;
+}
+
+.hi,
+.me,
+.name,
+.kaam,
+.int,
+.nav {
+    margin: 3px;
+    /* padding: auto; */
+}
+
+.hi {
+    font-size: 2rem;
+    color: var(--color3);
+    font-weight: 700;
+}
+
+.me {
+    font-weight: 600;
+    font-size: 1.4rem;
+}
+
+.name {
+    font-size: 3rem;
+    line-height: 1;
+}
+
+.kaam {
+    font-size: 2rem;
+
+}
+
+.nav {
+    padding: 0;
+    text-align: left;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: fit-content;
+}
+
+.nav-items {
+    width: fit-content;
+    height: 30px;
+    list-style: none;
+    font-size: 1.3rem;
+    font-weight: 500;
+    cursor: pointer;
+    margin-bottom: 3px;
+    padding-inline: 3px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 13px 3px 3px 13px;
+}
+
+.nav-items span {
+    position: relative;
+    z-index: 1;
+}
+
+.nav-items:hover {
+    color: var(--color3);
+    transform: scale(1.05);
+    transition: all .25s ease-in-out;
+}
+
+.buttons {
+    margin-top: 0;
+    white-space: nowrap;
+}
+
+a {
+    text-decoration: none;
+}
+
+.btn {
+    width: 180px;
+    background: var(--color2);
+    border: none;
+    border-radius: 10px;
+    color: white;
+    height: 40px;
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-left: 20px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.20);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.btn:hover {
+    scale: 1.05;
+    transition: 100ms ease-out;
+}
+
+.btn:active {
+    scale: 1.025;
+    transition: 50ms ease-out;
+}
+
+.btn-icon {
+    width: 1.2rem;
+    height: 1.2rem;
+}
+
+/* Media query for smaller screens, adjust as needed */
+@media (max-width: 900px) {
+    .info {
+        /* Add responsive styles for smaller screens here */
+        width: fit-content;
+        /* padding-left: -20px; */
+    }
+}
+    
+    /* 
+    .nav-items:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 60px;
+        width: 200px;
+        background: #309fed;
+        -webkit-transition: all .5s ease-in-out;
+        transition: all .5s ease-in-out;
+        -webkit-transform: translateX(-100%) translateY(-25%);
+        transform: translateX(-100%) translateY(-25%);
+    }
+    
+    .nav-items:hover:after {
+        -webkit-transform: translateX(-9%) translateY(-25%);
+        transform: translateX(-9%) translateY(-25%);
+    } */
+    
+    /* When hovering over an .nav-items, change the color of all other .nav-items to #5D6165 */
+    /* .nav-items:hover {
+        color: var(--white);
+        background-color: var(--color2);
+        border-radius: 13px 3px 3px 13px;
+        background-size: 200% 100%;
+        background-position: right bottom;
+        scale: 1.09;
+    } */
