@@ -11,169 +11,197 @@
 .home {
     width: 100%;
     height: 100%;
-    background-color: var(--primary);
+    /* background-color: var(--white); */
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: 500ms;
-    color: var(--white);
-    position: relative;
-}
-
-.home-light {
-    width: 100%;
-    height: 100%;
-    background-color: var(--white);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: 500ms;
     color: var(--primary);
     position: relative;
+    overflow: hidden;
+    /* -webkit-transition: all .5s ease-in-out; */
+    /* transition: all .5s ease-in-out; */
+}
+
+
+
+
+.dark {
+    background-color: var(--primary);
+    /* transition: 500ms; */
+    color: var(--white);
+    /* -webkit-transition: all .5s ease-in-out; */
+    /* transition: all .5s ease-in-out; */
+}
+
+.backdrop {
+    position: absolute;
+    z-index: -1;
+    height: 100%;
+    rotate: 180deg;
 }
 
 .lamp-icon {
     width: 100px;
     position: absolute;
     top: 0;
+    left: 35%;
     z-index: 2;
 }
 
-.lamp-icon:hover {
-    scale: 1.2;
-    transition: ease-in 150ms;
+.lamp-icon:hover { 
+    z-index: 2;
+    scale: 1.15;
+}
+
+.lamp-icon:active {
+    z-index: 2;
+    scale: 1.1;
 }
 
 .left {
-    width: 50%;
+    width: 40%;
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: end;
 }
-
-.hi, .me, .name, .kaam, .int, .nav {
-    margin: 3px;
-    padding: auto;
-}
-
-.hi {
-    font-size: 2rem;
-    color: var(--color3);
-    font-weight: 700;
-}
-
-.me {
-    font-weight: 600;
-    font-size: 1.4rem;
-    color: var(--white);
-}
-
-.me-light {
-    font-weight: 500;
-    font-size: 1.4rem;
-    color: var(--primary);
-}
-
-.name {
-    font-size: 3rem;
-    line-height: 1;
-}
-
-.kaam {
-    font-size: 2rem;
-
-}
-
-.nav {
-    padding: 0;
-    text-align: left;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    width: fit-content;
-}
-
-.nav-items {
-    width: 80px;
-    height: 30px;
-    list-style: none;
-    font-size: 1.3rem;
-    font-weight: 500;
-    cursor: pointer;
-    margin-bottom: 3px;
-    padding-inline: 20px;
-    position: relative;
-    overflow: hidden;
-    border-radius: 13px 3px 3px 13px;
-}
-
-.nav-items span {
-    position: relative;
-    z-index: 1;
-}
-
-.nav-items:after {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 60px;
-    width: 200px;
-    background: var(--color1);
-    -webkit-transition: all .5s ease-in-out;
-    transition: all .5s ease-in-out;
-    -webkit-transform: translateX(-100%) translateY(-25%);
-    transform: translateX(-100%) translateY(-25%);
-}
-
-.nav-items:hover:after {
-    -webkit-transform: translateX(-9%) translateY(-25%);
-    transform: translateX(-9%) translateY(-25%);
-}
-
-/* When hovering over an .nav-items, change the color of all other .nav-items to #5D6165 */
-/* .nav-items:hover {
-    color: var(--white);
-    background-color: var(--color2);
-    border-radius: 13px 3px 3px 13px;
-    background-size: 200% 100%;
-    background-position: right bottom;
-    scale: 1.09;
-} */
-
-button {
-    width: 160px;
-    background: var(--color2);
-    border-color: var(--color3);
-    border-width: 2px;
-    border-radius: 10px;
-    color: white;
-    border: none;
-    height: 40px;
-    font-size: 1.2rem;
-    font-weight: 700;
-    margin-left: 20px;
-    margin-top: 0.5rem;
-    margin-bottom: 3px;
-    cursor: pointer;
-    position: relative;
-    overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.20);
-}
-
-button:hover {
-    scale: 1.1;
-    transition: 100ms ease-out;
-}
-
-button:active {
-    scale: 1.05;
-    transition: 50ms ease-out;
-}
-
 
 .disp {
-    width: 50%;
+    width: 60%;
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Media query for smaller screens, adjust as needed */
+/* tablet devices */
+@media (max-width: 900px ) {
+    .home {
+        width: 100%;
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: var(--primary);
+        position: relative;
+    }
+    .dark {
+        background-color: var(--primary);
+        color: var(--white);
+    }
+    .backdrop {
+        position: absolute;
+        z-index: -1;
+        height: 100%;
+        rotate: 90deg;
+    }
+
+    .lamp-icon {
+        width: 100px;
+        position: absolute;
+        top: 0;
+        z-index: 2;
+    }
+
+    .lamp-icon:hover {
+        z-index: 2;
+        scale: 1.15;
+    }
+
+    .lamp-icon:active {
+        z-index: 2;
+        scale: 1.1;
+    }
+
+    .left {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: start;
+        padding-left: 120px;
+        transform: scale(1.3);
+    }
+
+    .disp {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+    }
+}
+
+/* Media query for even smaller screens, adjust as needed */
+/* mobile devices */
+@media (max-width: 480px) {
+    .home {
+        /* Add responsive styles for even smaller screens here */
+        width: 100%;
+        height: fit-content;
+        /* background-color: var(--white); */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: var(--primary);
+        position: relative;
+    }
+    .dark {
+        background-color: var(--primary);
+        /* transition: 500ms; */
+        color: var(--white);
+        /* -webkit-transition: all .5s ease-in-out; */
+        /* transition: all .5s ease-in-out; */
+    }
+    
+    .backdrop {
+        position: absolute;
+        z-index: -1;
+        height: 100%;
+        rotate: 90deg;
+    }
+    
+    .lamp-icon {
+        width: 100px;
+        position: absolute;
+        top: 0;
+        z-index: 2;
+    }
+    
+    .lamp-icon:hover {
+        z-index: 2;
+        scale: 1.15;
+    }
+    
+    .lamp-icon:active {
+        z-index: 2;
+        scale: 1.1;
+    }
+    
+    .left {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: end;
+        padding-left: 50px;
+        transform: scale(1);
+    }
+    
+    .disp {
+        width: 90%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 5%;
+    }
 }
