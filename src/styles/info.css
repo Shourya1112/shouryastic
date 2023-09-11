@@ -1,6 +1,7 @@
 .info {
-    margin-right: 150px;
-    margin-left: 50px;
+    margin-top: auto;
+    /* margin-right: 150px; */
+    /* margin-left: 300px; */
     width: fit-content;
 }
 
@@ -11,8 +12,9 @@
 .int,
 .nav {
     margin: 3px;
-    /* padding: auto; */
+    /*  padding: auto; */
 }
+
 
 .hi {
     font-size: 2rem;
@@ -32,7 +34,6 @@
 
 .kaam {
     font-size: 2rem;
-
 }
 
 .nav {
@@ -51,7 +52,7 @@
     font-weight: 500;
     cursor: pointer;
     margin-bottom: 3px;
-    padding-inline: 3px;
+    /* padding-inline: 3px; */
     position: relative;
     overflow: hidden;
     border-radius: 13px 3px 3px 13px;

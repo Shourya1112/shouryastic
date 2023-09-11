@@ -37,10 +37,12 @@ const Info = (props) => {
         </ul>
         <h3 className='buttons'>
             if ( You = Like my Work ) {"{"} <br/>
-                <button className='btn contact'>
+            <a href='https://forms.gle/1YG5Kbc9gjcv1HAS7'>
+                <button className='btn'>
                     <img src={plane} alt='icon' className='btn-icon' />
                     Contact Me
-                </button> 
+                    </button> 
+                </a>
             {"}"} else {"{"} 
                 <a
                     href='https://drive.google.com/file/d/1JbyVNQ_kB9opZ_whDfU-_yBwYGQsbaGN/view?usp=drive_link'
@@ -60,4 +62,3 @@ const Info = (props) => {
 }
 
 export default Info
-            // <li className='nav-items'><span>-- Work</span></li>
