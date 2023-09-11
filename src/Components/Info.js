@@ -45,7 +45,7 @@ const Info = (props) => {
                 </a>
             {"}"} else {"{"} 
                 <a
-                    href='https://drive.google.com/file/d/1JbyVNQ_kB9opZ_whDfU-_yBwYGQsbaGN/view?usp=drive_link'
+                    href='https://drive.google.com/file/d/1_eZ3aUMKwOOaD5nVTvI2nDM7Rb3sUix2/view?usp=drive_link'
                     target="_blank"
                     rel="noopener noreferrer"
                 >
