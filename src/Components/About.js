@@ -6,18 +6,18 @@ const About = (props) => {
 
   return (
     <div className='about' id='about'>
-        <div className={isDark? 'card' : 'card light'}>
             <h4 className='tag2'>{"<div id='About'>"}</h4>
-            <p className='passage'>Tech enthusiast turned full stack developer. Passionate about creating seamless user experiences through clean and efficient code. Equipped with a diverse skill set in front-end and back-end technologies, I strive to bring innovative solutions to life. Ready to tackle challenges and make a positive impact in the digital world.</p>
+            <p className='passage'>
+                Hey there! 👋 I'm Shourya, your friendly neighborhood MERN Stack Developer, and I've got a knack for turning coffee into code ☕💻. With a solid foundation in JavaScript and 2 years of hands-on React.js experience, I'm all about crafting web applications that are not just user-friendly but also sprinkle a little magic 🪄 on the user experience.
+            </p>
             <h4 className='tag2'>{"</div>"}</h4>
-        </div>
-        <div className={isDark? 'card' : 'card light'}>
             <h4 className='tag2'>{"<div id='Currently Working at'>"}</h4>
-            <h3 className='ans comp-name'>EiKomp</h3>
-            <h4 className='ans profile'>-- Frontend Developer</h4>
-            <p className='ans period'>Aug, 2021 -{">"} Current</p>
+            <div>
+                <h3 className='ans comp-name'>EiKomp</h3>
+                <h4 className='ans profile'>-- Frontend Developer</h4>
+                <p className='ans period'>Aug, 2021 -{">"} Current</p>
+            </div>
         <h4 className='tag2'>{"</div>"}</h4>
-        </div>
     </div>
   )
 }

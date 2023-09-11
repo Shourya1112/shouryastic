@@ -12,12 +12,9 @@
     /* Optional: Set the background to match your component */
 }
 
-.divider-light {
-    display: none;
-}
-
-@media (max-width: 900) {
+@media(max-width: 900) {
     .window {
-        overflow-y: unset;
+        height: 100%;
+        overflow-y: visible;
     }
 }

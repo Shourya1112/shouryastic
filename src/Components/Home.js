@@ -4,6 +4,7 @@ import lampOn from "../Assets/Images/lamp-on.png";
 import backdropWhite from "../Assets/Images/white-contour-c990a61f.svg";
 import Info from './Info';
 import Window from './Window';
+import Footer from './Footer';
 import "../styles/Home.css"
 
 const Home = () => {
@@ -17,10 +18,16 @@ const Home = () => {
         localStorage.setItem('darkMode', JSON.stringify(darkMode));
     }, [darkMode]);  
 
-    const [ activeTab, setActiveTab ] = useState(1);
+    const [ activeTab, setActiveTab ] = useState(() => {
+    const storedActiveTab = localStorage.getItem('activeTab');
+        return storedActiveTab ? JSON.parse(storedActiveTab) : 1;
+    });
+
+    useEffect(() => {
+        localStorage.setItem('activeTab', JSON.stringify(activeTab));
+    }, [activeTab]);
+
     console.log(activeTab)
-
-
 
     const handleDarkMode = () => {
         setDarkmode(prev => !prev)
@@ -36,17 +43,27 @@ const Home = () => {
             onClick={handleDarkMode}
         />
         <div className='left'>
-            <Info 
-                darkMode={darkMode}
-                setActiveTab={setActiveTab}
-            />
+            <div className='tab'>
+                <Info 
+                    darkMode={darkMode}
+                    setActiveTab={setActiveTab}
+                />
+                <div className='tab-footer'>
+                    <Footer />
+                </div>
+            </div>
         </div>
         <div className='disp'>
-            <Window 
-                darkMode={darkMode} 
-                activeTab={activeTab}
-            />
-        </div>
+            <div className='active-comp'>
+                <Window 
+                    darkMode={darkMode} 
+                    activeTab={activeTab}
+                />
+            </div>
+            <div className="tab-footer-mobile">
+                <Footer />
+            </div>
+            </div>
     </div>
   )
 }
